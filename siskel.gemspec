@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["JP Hastings-Spital", "Jon Dahl"]
-  s.date = %q{2010-07-21}
+  s.date = %q{2010-08-01}
   s.description = %q{Inspect a video/audio file for properties and metadata, using mediainfo}
   s.email = %q{jphastings@gmail.com}
   s.extra_rdoc_files = [
@@ -20,7 +20,10 @@ Gem::Specification.new do |s|
      "CHANGELOG",
      "MIT-LICENSE",
      "README.rdoc",
+     "Rakefile",
+     "VERSION",
      "lib/siskel.rb",
+     "siskel.gemspec",
      "test/fixtures/test_mediainfo_results.rb",
      "test/fixtures/tiny.mp4",
      "test/siskel_test.rb"
