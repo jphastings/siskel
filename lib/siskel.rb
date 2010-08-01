@@ -1,4 +1,3 @@
-require 'ruby-debug'
 class Siskel
 
   #   results = Siskel.review(:file => 'path/to/myfile.mov')
@@ -9,7 +8,7 @@ class Siskel
     def review(options = {})
       raise ArgumentError, "Must supply either an input file or a pregenerated response" if options[:raw_response].nil? and options[:file].nil?
       raise ArgumentError, "File not found: #{options[:file]}" if options[:file] and !FileTest.exist?(options[:file])
-      parse_results(options[:raw_response] || `mediainfo #{options[:file]}`)
+      parse_results(options[:raw_response] || `mediainfo "#{options[:file]}"`)
     end
   
     def parse_results(mediainfo_results)
